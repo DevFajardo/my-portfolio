@@ -1,0 +1,53 @@
+---
+import LinkedinIcon from "../icons/LinkedinIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import EmailIcon from "../icons/EmailIcon.astro";
+---
+
+<ul>
+  <li>
+    <a
+      aria-label="Linkedin"
+      href="https://www.linkedin.com/in/emmanuel-fajardo-cadena"
+      target="_blank"><LinkedinIcon /></a
+    >
+  </li>
+  <li>
+    <a aria-label="Github" href="https://github.com/DevFajardo" target="_blank"
+      ><GithubIcon /></a
+    >
+  </li>
+  <li>
+    <a
+      aria-label="Email"
+      href="mailto:devfajardocadena@gmail.com"
+      target="_blank"><EmailIcon /></a
+    >
+  </li>
+</ul>
+<style>
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+  li {
+    list-style: none;
+  }
+
+  a {
+    outline: 1px solid rgba(230, 57, 70, 1);
+    background-color: rgba(17, 17, 17, 1);
+    padding: 0 17px;
+    font-size: 31px;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 3px 3px 0px 0px rgba(230, 57, 70, 1);
+  }
+
+  a:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px rgba(230, 57, 70, 1);
+    color: rgba(230, 57, 70, 1);
+  }
+</style>

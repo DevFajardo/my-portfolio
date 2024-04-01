@@ -1,13 +1,81 @@
 ---
-import Contact from "./Contact.astro"
+import Contact from "./Contact.astro";
+import { Image } from "astro:assets";
+import fondo from "./assets/fondo.png";
 ---
 
-<h6>welcome</h6>
-<h1>Emmanuel Fajardo</h1>
-<p>
-  Soy un desarrollador web con un enfoque sólido en la experiencia del usuario,
-  las animaciones y las microinteracciones. Estoy apasionado por crear sitios
-  web que sean intuitivos, atractivos visualmente y altamente funcionales.
-</p>
-<Contact />
-<img src="/images/undraw_web_developer_p3e5.svg" alt="Emmanuel fajardo web developer" />
+<section>
+  <div id="contentHero">
+    <div>
+      <h6>bienvenido</h6>
+      <h1>Emmanuel Fajardo</h1>
+      <p>
+        Soy un desarrollador web con un enfoque sólido en la experiencia del
+        usuario y las animaciones. apasionado por crear sitios web atractivos y
+        altamente funcionales.
+      </p>
+    </div>
+    <Contact />
+  </div>
+  <div id="containerImage">
+    <Image
+      object-fit:
+      cover;
+      width={300}
+      height={250}
+      src={fondo}
+      alt="Emmanuel fajardo web developer"
+      loading="eager"
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    background-color: rgb(23, 23, 23);
+    border: 1px solid rgb(44 ,44 ,44 );
+  }
+  section:hover{
+    outline: 1px solid rgba(230, 57, 70, 1);
+  }
+  p {
+    font-size: 1.15rem;
+    text-wrap: pretty;
+    font-weight: 100;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(
+      black 70%,
+      transparent
+    );
+  }
+  #contentHero {
+    padding: 2rem 0px 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  h6 {
+    opacity: 0.5;
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+  }
+  h1 {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  #containerImage{
+    height: 92%;
+    width: 100%;
+  }
+</style>

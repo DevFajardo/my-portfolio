@@ -1,4 +1,8 @@
 ---
+import '@fontsource/hanken-grotesk/300.css';
+import '@fontsource/hanken-grotesk/400.css';
+import '@fontsource/hanken-grotesk/700.css';
+
 interface Props {
   title: string;
 }
@@ -12,7 +16,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Emmanuel Fajardo desarrollador web frontend creacion de paginas web"
+      content="Emmanuel Fajardo desarrollador y programador web frontend creacion de paginas web"
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -25,24 +29,28 @@ const { title } = Astro.props;
     </main>
   </body>
 </html>
-<style>
+<style is:global>
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   body {
+    font-family: 'Hanken Grotesk', sans-serif;
     background-color: rgba(17, 17, 17, 1);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
-  main{
-	color: white;
-	margin: auto;
-	padding: 2px;
-	display: grid;
-	border: 2px solid red;
+  main {
+    width: 70%;
+    padding: 110px;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 50% 25% 25%;
+    color: rgba(255, 255, 255, 0.831);
+    height: 100%;
+    gap: 20px;
   }
 </style>
