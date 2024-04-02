@@ -8,11 +8,10 @@ import fondo from "./assets/fondo.png";
   <div id="contentHero">
     <div>
       <h6>bienvenido</h6>
-      <h1>Emmanuel Fajardo</h1>
+      <h1>Emmanuel Fajardo | Desarrollador web Frontend</h1>
       <p>
-        Soy un desarrollador web con un enfoque sólido en la experiencia del
-        usuario y las animaciones. apasionado por crear sitios web atractivos y
-        altamente funcionales.
+        Tengo un enfoque sólido en la <label for="color">experiencia de usuario</label> y las
+        animaciones. Apasionado por crear sitios web atractivos y <label for="color">altamente funcionales</label>.
       </p>
     </div>
     <Contact />
@@ -31,6 +30,9 @@ import fondo from "./assets/fondo.png";
 </section>
 
 <style>
+  label{
+    color: rgba(230,57,70,1);
+  }
   section {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
@@ -38,24 +40,23 @@ import fondo from "./assets/fondo.png";
     display: grid;
     grid-template-columns: 65% 35%;
     background-color: rgb(23, 23, 23);
-    border: 1px solid rgb(44 ,44 ,44 );
+    border: 1px solid rgb(44, 44, 44);
   }
-  section:hover{
+  section:hover {
     outline: 1px solid rgba(230, 57, 70, 1);
   }
   p {
-    font-size: 1.15rem;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
     text-wrap: pretty;
-    font-weight: 100;
+    font-weight: 400;
   }
   img {
+    margin-top: 30px;
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    mask-image: linear-gradient(
-      black 70%,
-      transparent
-    );
+    height: 90%;
+    mask-image: linear-gradient(black 70%, transparent);
   }
   #contentHero {
     padding: 2rem 0px 2rem 2rem;
@@ -69,12 +70,12 @@ import fondo from "./assets/fondo.png";
     margin-bottom: 3px;
   }
   h1 {
-    font-size: 1.25rem;
+    font-size: 1.8rem;
     color: white;
     font-weight: 700;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
   }
-  #containerImage{
+  #containerImage {
     height: 92%;
     width: 100%;
   }
