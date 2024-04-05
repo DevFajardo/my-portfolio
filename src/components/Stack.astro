@@ -1,0 +1,34 @@
+---
+import JavascriptIcon from "../icons/JavascriptIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import GitIcon from "../icons/GitIcon.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import NextIcon from "../icons/NextIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import TypescriptIcon from "../icons/TypescriptIcon.astro";
+import MarkdownIcon from "../icons/MarkdownIcon.astro";
+
+interface Props {
+  w: number;
+  h: number;
+}
+
+const { w, h } = Astro.props;
+---
+
+<li><JavascriptIcon width={w} height={h} /></li>
+<li><GithubIcon width={w} height={h} /></li>
+<li><GitIcon width={w} height={h} /></li>
+<li><AstroIcon width={w} height={h} /></li>
+<li><ReactIcon width={w} height={h} /></li>
+<li><NextIcon width={w} height={h} /></li>
+<li><TailwindIcon width={w} height={h} /></li>
+<li><TypescriptIcon width={w} height={h} /></li>
+<li><MarkdownIcon width={w} height={h} /></li>
+
+<style>
+  li {
+    color: rgba(230, 57, 70, 1);
+  }
+</style>

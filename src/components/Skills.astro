@@ -1,8 +1,28 @@
+---
+import Stack from "../components/Stack.astro";
+---
+
 <section>
-  <h2>skills</h2>
+  <div>
+    <h2>Tecnologias</h2>
+    <ul>
+      <Stack w={50} h={50} />
+    </ul>
+  </div>
 </section>
 
 <style>
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.5rem;
+    justify-content: space-between;
+    
+  }
+  h2 {
+    margin-bottom: 1.5rem;
+  }
   section {
     background-color: rgb(23, 23, 23);
     border: 1px solid rgb(44, 44, 44);
@@ -10,7 +30,10 @@
     grid-column: 1 / 2;
     grid-row: 2 / 4;
   }
-  section:hover{
+  section:hover {
     outline: 1px solid rgba(230, 57, 70, 1);
+  }
+  div {
+    padding: 2rem 2rem 0rem 2rem;
   }
 </style>

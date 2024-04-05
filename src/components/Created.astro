@@ -1,16 +1,35 @@
+---
+const date = new Date();
+const year = date.getFullYear();
+---
+
 <section>
-  <h2>created</h2>
+  <p>
+    © {year} · Elaborado con <label for="color">♥️</label> usando <label
+      for="color">Astro</label
+    > por Emmanuel.
+  </p>
 </section>
 
 <style>
   section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-column: 3 / 4;
     grid-row: 3 / 4;
     background-color: rgb(23, 23, 23);
     border: 1px solid rgb(44, 44, 44);
     border-radius: 8px;
   }
-  section:hover{
+  p {
+    font-weight: 300;
+    margin: 2rem;
+  }
+  label {
+    color: rgba(230, 57, 70, 1);
+  }
+  section:hover {
     outline: 1px solid rgba(230, 57, 70, 1);
   }
 </style>
