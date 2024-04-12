@@ -17,18 +17,26 @@ interface Props {
 const { w, h } = Astro.props;
 ---
 
-<li><JavascriptIcon width={w} height={h} /></li>
-<li><GithubIcon width={w} height={h} /></li>
-<li><GitIcon width={w} height={h} /></li>
-<li><AstroIcon width={w} height={h} /></li>
-<li><ReactIcon width={w} height={h} /></li>
-<li><NextIcon width={w} height={h} /></li>
-<li><TailwindIcon width={w} height={h} /></li>
-<li><TypescriptIcon width={w} height={h} /></li>
-<li><MarkdownIcon width={w} height={h} /></li>
+<li data-name="Javascript"><JavascriptIcon width={w} height={h} /></li>
+<li data-name="Github"><GithubIcon width={w} height={h} /></li>
+<li data-name="Git"><GitIcon width={w} height={h} /></li>
+<li data-name="Astro"><AstroIcon width={w} height={h} /></li>
+<li data-name="ReactJs"><ReactIcon width={w} height={h} /></li>
+<li data-name="NextJs"><NextIcon width={w} height={h} /></li>
+<li data-name="TailwindCss"><TailwindIcon width={w} height={h} /></li>
+<li data-name="Typescript"><TypescriptIcon width={w} height={h} /></li>
+<li data-name="Markdown"><MarkdownIcon width={w} height={h} /></li>
 
 <style>
   li {
+    display: flex;
     color: rgba(230, 57, 70, 1);
+  }
+  li:hover::before {
+    color: white;
+    font-weight: 800;
+    content: attr(data-name);
+    position: absolute;
+    transform: translate(-10px, -20px);
   }
 </style>
