@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+
+interface Iproject {
+  name: string;
+  description: string;
+  image: ImageMetadata;
+  url: string;
+  github: string;
+  technologies: string[];
+}
+
+interface Props {
+  project: Iproject;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="projects">
+  <Image
+    width={200}
+    height={100}
+    src={project.image}
+    alt="imagen del proyecto"
+    loading="eager"
+  />
+  <h3>{project.name}</h3>
+  <ul>
+    {
+      project.technologies.map((technology) => {
+        return <li>{technology}</li>;
+      })
+    }
+  </ul>
+</div>
+<style>
+  h3 {
+    color: white;  
+    padding-left: 2px;
+  }
+  
+  img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .projects {
+    padding: 8px 1px 8px 0px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px rgba(230, 57, 70, 1);
+  }
+ 
+  ul {
+    list-style: none;
+  }
+  li {
+    font-weight: 300;
+    padding-left: 2px;
+  }
+</style>
