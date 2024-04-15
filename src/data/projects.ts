@@ -2,6 +2,7 @@ import memoryGame from "../components/assets/memoryGame.png";
 
 export const projects = [
   {
+    id : "1",
     name: "Memory Game",
     description: "Juego de memoria",
     image: memoryGame,
@@ -10,7 +11,8 @@ export const projects = [
     technologies: ["NextJs", "Typescript", "TailwindCss"],
   },
   {
-    name: "Memory Game",
+    id : "2",
+    name: "oTro projecto",
     description: "Juego de memoria",
     image: memoryGame,
     url: "",

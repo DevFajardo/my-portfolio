@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 interface Iproject {
+  id: string;
   name: string;
   description: string;
   image: ImageMetadata;
@@ -17,7 +18,8 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<div class="projects">
+<div class="projects" id={project.id}>
+    <h4>Leer Mas</h4>
   <Image
     width={200}
     height={100}
@@ -36,20 +38,40 @@ const { project } = Astro.props;
 </div>
 <style>
   h3 {
-    color: white;  
+    color: white;
     padding-left: 2px;
   }
-  
   img {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
   .projects {
+    cursor: pointer;
     padding: 8px 1px 8px 0px;
     border-radius: 15px;
     box-shadow: 3px 3px 3px 0px rgba(230, 57, 70, 1);
   }
- 
+  h4{
+    display: none;
+  }
+  .projects:hover {
+    position: relative;
+    box-shadow: 3px 3px 3px 0px rgba(230, 57, 70, 0.2);
+    img, h3, ul{
+      opacity: 0.1;
+    }
+    h4{
+      color: white;
+      font-size: 20px;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-top: 45%;
+    }
+  }
+
   ul {
     list-style: none;
   }
@@ -58,3 +80,12 @@ const { project } = Astro.props;
     padding-left: 2px;
   }
 </style>
+<script>
+  const proyectos = document.querySelectorAll(".projects");
+  proyectos.forEach((proyecto) => {
+    proyecto.addEventListener("click", () => {
+      alert("soy el proyecto numero: " + proyecto.id);
+    });
+  });
+  console.log(proyectos);
+</script>
